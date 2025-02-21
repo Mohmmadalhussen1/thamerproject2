@@ -1,0 +1,61 @@
+services:
+  db:
+    image: 'postgres:latest'
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: QwErTyUiOp
+      POSTGRES_DB: thamer
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    restart: unless-stopped
+    networks:
+      - app_network
+
+  backend:
+    build:
+      context: .
+    environment:
+      - DATABASE_URL
+      - SECRET_KEY
+      - ACCESS_TOKEN_EXPIRE_MINUTES
+      - OTP_LENGTH
+    env_file:
+      - .env
+    depends_on:
+      - db
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app
+    restart: unless-stopped
+    networks:
+      - app_network
+
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: pgadmin-1
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@thamerweb.com  # Admin email
+      PGADMIN_DEFAULT_PASSWORD: admin            # Admin password
+      PGADMIN_CONFIG_SERVER_MODE: "True"         # Ensure server mode is enabled
+      SCRIPT_NAME: /pgadmin             # Set the base path for PgAdmin
+    volumes:
+      - pgadmin_data:/var/lib/pgadmin            # Persistent data storage
+    ports:
+      - "5050:80"                                # Expose port 5050
+    depends_on:
+      - db                                       # Ensure the database starts first
+    networks:
+      - app_network                              # Use app network
+    restart: unless-stopped                      # Auto-restart on failure
+    command: ["sh", "-c", "python run_pgadmin.py & pgadmin4"]
+
+networks:
+  app_network:
+    driver: bridge
+
+volumes:
+  postgres_data:
+  pgadmin_data:

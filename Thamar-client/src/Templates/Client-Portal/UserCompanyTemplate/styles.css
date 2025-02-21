@@ -1,0 +1,71 @@
+.ant-table-wrapper {
+  overflow: auto !important;
+}
+
+.ant-table {
+  table-layout: auto !important;
+}
+
+.custom-steps .ant-steps-item-icon {
+  background-color: #c5e34e !important;
+  border-color: #c5e34e !important;
+}
+.custom-steps .ant-steps-item-icon .ant-steps-icon {
+  color: #ffff !important;
+}
+
+.custom-steps .anticon {
+  color: #003422;
+}
+
+.custom-steps .ant-steps-item-active .ant-steps-item-icon {
+  color: #003422;
+}
+
+/* Change the connecting line color for finished steps */
+.custom-steps .ant-steps-item-finish .ant-steps-item-title::after {
+  background-color: #003422 !important;
+}
+
+.custom-steps .ant-steps-item-title {
+  font-size: 1rem !important;
+}
+
+.custom-button {
+  background-color: #809848 !important; /* Default background */
+  border-color: #809848 !important; /* Default border color */
+  color: white !important; /* Text color */
+  transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out; /* Smooth transition */
+}
+
+.custom-button:hover {
+  background-color: #a3b76f !important; /* Hover background */
+  border-color: #a3b76f !important; /* Hover border */
+}
+
+/*Previous button styles */
+.previous-button {
+  background-color: #f69c2e; /* Vibrant orange background */
+  color: #ffffff; /* White text */
+  border: none; /* Remove border */
+}
+
+.previous-button:hover {
+  background-color: #d87c1e !important; /* Darker orange for hover */
+  color: #ffffff !important; /* Maintain white text */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2) !important; /* Add a shadow for effect */
+}
+
+/* Cancel button styles */
+.cancel-button {
+  background-color: #e0e0e0; /* Light grey background */
+  color: #333333; /* Dark grey text */
+  border: 1px solid #d0d0d0; /* Subtle border */
+}
+
+.cancel-button:hover {
+  background-color: #d6d6d6 !important; /* Slightly darker grey for hover */
+  color: #000000 !important; /* Darker text for hover */
+  border-color: #c0c0c0 !important; /* Slightly darker border */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1) !important; /* Add a light shadow for effect */
+}

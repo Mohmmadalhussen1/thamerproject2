@@ -1,0 +1,13 @@
+.faq-collapse .ant-collapse-header {
+  border-bottom: 1px solid #e5e7eb; /* Light gray border */
+  background-color: #ffffff; /* White background */
+  padding: 16px; /* Add padding for better alignment */
+}
+
+.faq-collapse .ant-collapse-content {
+  padding: 16px;
+}
+
+.faq-collapse .ant-collapse-header:hover {
+  background-color: #f9fafb; /* Slight hover effect */
+}

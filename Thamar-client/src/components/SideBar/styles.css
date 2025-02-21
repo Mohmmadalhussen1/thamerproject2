@@ -1,0 +1,22 @@
+/* Custom styles for selected sidebar menu item */
+.ant-menu-item-selected {
+  background-color: black !important; /* Custom background color */
+  color: #ffffff !important; /* Custom text color */
+}
+
+.ant-menu-item-selected a {
+  color: #ffffff !important; /* Ensure link text also changes */
+}
+
+.custom-icon {
+  display: inline-block;
+  transition: color 0.3s ease;
+}
+
+.custom-icon.active-icon {
+  color: #809848; /* Active color */
+}
+
+.custom-icon.inactive-icon {
+  color: #998e95; /* Inactive color */
+}

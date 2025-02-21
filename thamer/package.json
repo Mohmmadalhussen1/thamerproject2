@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "alembic": "^0.0.3",
+    "docker": "^1.0.0"
+  }
+}

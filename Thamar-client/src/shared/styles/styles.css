@@ -1,0 +1,15 @@
+.primary-btn {
+  background-color: #809848; /* Primary color */
+  color: white;
+  padding: 0.5rem 0; /* Equivalent to py-2 */
+  border-radius: 0.375rem; /* Medium rounded corners */
+  transition: background-color 0.3s ease-in-out;
+}
+
+.primary-btn:hover {
+  background-color: #a3b76f; /* Hover color */
+}
+
+.w-full {
+  width: 100%;
+}
